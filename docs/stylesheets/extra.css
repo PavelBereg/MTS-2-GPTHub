@@ -1,0 +1,174 @@
+/* ═══════════════════════════════════════════════════════════
+   MTS MWS Brand — красный + белый + серые акценты
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* MTS Red palette */
+  --mts-red:        #E30611;
+  --mts-red-dark:   #C00510;
+  --mts-red-light:  #FF2D37;
+
+  /* Grays */
+  --mts-gray-100:   #F5F5F7;
+  --mts-gray-200:   #E8E8ED;
+  --mts-gray-300:   #BCBCC3;
+  --mts-gray-500:   #6E6E73;
+  --mts-gray-700:   #333338;
+  --mts-gray-900:   #1D1D1F;
+
+  --mts-white:      #FFFFFF;
+}
+
+/* ── Light theme ─────────────────────────────────────────── */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:            var(--mts-red);
+  --md-primary-fg-color--light:     var(--mts-red-light);
+  --md-primary-fg-color--dark:      var(--mts-red-dark);
+  --md-primary-bg-color:            var(--mts-white);
+  --md-primary-bg-color--light:     var(--mts-white);
+
+  --md-accent-fg-color:             var(--mts-red);
+  --md-accent-fg-color--transparent: rgba(227, 6, 17, 0.12);
+  --md-accent-bg-color:             var(--mts-white);
+
+  --md-default-bg-color:            var(--mts-white);
+  --md-default-fg-color:            var(--mts-gray-900);
+  --md-default-fg-color--light:     var(--mts-gray-500);
+  --md-default-fg-color--lighter:   var(--mts-gray-300);
+  --md-default-fg-color--lightest:  var(--mts-gray-200);
+
+  --md-typeset-a-color:             var(--mts-red);
+
+  --md-code-bg-color:               var(--mts-gray-100);
+  --md-code-fg-color:               var(--mts-gray-900);
+
+  --md-footer-bg-color:             var(--mts-gray-900);
+  --md-footer-bg-color--dark:       var(--mts-gray-900);
+  --md-footer-fg-color:             var(--mts-white);
+  --md-footer-fg-color--light:      var(--mts-gray-300);
+  --md-footer-fg-color--lighter:    var(--mts-gray-500);
+}
+
+/* ── Dark theme ──────────────────────────────────────────── */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:            var(--mts-red);
+  --md-primary-fg-color--light:     var(--mts-red-light);
+  --md-primary-fg-color--dark:      var(--mts-red-dark);
+  --md-primary-bg-color:            var(--mts-gray-900);
+  --md-primary-bg-color--light:     var(--mts-gray-700);
+
+  --md-accent-fg-color:             var(--mts-red-light);
+  --md-accent-fg-color--transparent: rgba(255, 45, 55, 0.15);
+  --md-accent-bg-color:             var(--mts-gray-900);
+
+  --md-default-bg-color:            #18181B;
+  --md-default-fg-color:            #E4E4E7;
+  --md-default-fg-color--light:     var(--mts-gray-300);
+  --md-default-fg-color--lighter:   var(--mts-gray-500);
+  --md-default-fg-color--lightest:  var(--mts-gray-700);
+
+  --md-typeset-a-color:             var(--mts-red-light);
+
+  --md-code-bg-color:               #27272A;
+  --md-code-fg-color:               #E4E4E7;
+
+  --md-footer-bg-color:             #111113;
+  --md-footer-bg-color--dark:       #0A0A0B;
+  --md-footer-fg-color:             var(--mts-gray-300);
+  --md-footer-fg-color--light:      var(--mts-gray-500);
+  --md-footer-fg-color--lighter:    var(--mts-gray-700);
+}
+
+/* ── Header / navigation bar ─────────────────────────────── */
+.md-header {
+  background: var(--mts-red);
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+.md-tabs {
+  background: var(--mts-red-dark);
+}
+
+/* ── Search bar highlight ────────────────────────────────── */
+.md-search__input {
+  background: rgba(255,255,255,.15);
+}
+[data-md-color-scheme="default"] .md-search__input {
+  color: var(--mts-white);
+}
+
+/* ── Navigation sidebar ──────────────────────────────────── */
+.md-nav__link--active,
+.md-nav__link:hover {
+  color: var(--mts-red) !important;
+}
+[data-md-color-scheme="slate"] .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  color: var(--mts-red-light) !important;
+}
+
+/* ── Admonitions — MTS-стилизация ────────────────────────── */
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: var(--mts-red);
+}
+.md-typeset .tip > .admonition-title,
+.md-typeset .tip > summary {
+  background-color: rgba(227, 6, 17, 0.1);
+  border-color: var(--mts-red);
+}
+.md-typeset .tip > .admonition-title::before,
+.md-typeset .tip > summary::before {
+  color: var(--mts-red);
+}
+
+/* ── Code blocks ─────────────────────────────────────────── */
+.md-typeset code {
+  border-radius: 4px;
+  font-size: 0.82em;
+}
+.md-typeset pre > code {
+  border-radius: 8px;
+}
+
+/* ── Tables ──────────────────────────────────────────────── */
+.md-typeset table:not([class]) th {
+  background: var(--mts-red);
+  color: var(--mts-white);
+  font-weight: 600;
+}
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background: var(--mts-red-dark);
+}
+
+/* ── Buttons / links ─────────────────────────────────────── */
+.md-typeset a:hover {
+  color: var(--mts-red-dark);
+}
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: var(--mts-red-light);
+}
+
+/* ── Content area — better spacing ───────────────────────── */
+.md-typeset h1 {
+  font-weight: 700;
+  color: var(--mts-gray-900);
+}
+[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: #FAFAFA;
+}
+.md-typeset h2 {
+  border-bottom: 2px solid var(--mts-gray-200);
+  padding-bottom: 0.3em;
+}
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  border-bottom-color: var(--mts-gray-700);
+}
+
+/* ── Scrollbar MTS accent ────────────────────────────────── */
+::-webkit-scrollbar-thumb {
+  background: var(--mts-gray-300);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mts-red);
+}
