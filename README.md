@@ -24,9 +24,9 @@ graph TD
     User([User / OpenWebUI]) --- API[FastAPI Layer - OpenAI API Compat]
     
     subgraph "Backend Core"
-        API -- [x] Update `README.md` to reflect the latest project state
-- [x] Update `Features.md` with a comprehensive list of abilities
- Extraction Task]
+        API --> Classifier[Intention Classifier]
+        
+        Classifier --> BG_Fact[Background Fact Extraction Task]
         BG_Fact -.-> Qdrant_Facts[(Qdrant: user_facts)]
         
         Classifier -->|Chat / Search / Research / Data| Graph[LangGraph Orchestration Engine]
